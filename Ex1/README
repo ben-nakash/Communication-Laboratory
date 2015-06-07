@@ -1,0 +1,12 @@
+nakashbe
+Ben Nakash 303140057
+ex1
+Submited Files:
+	Makefile
+	README	- Readme file with description of the contents & personal functions within the exercise.
+	GenericHashTable.c - Implications of the functions located in the header file.
+	GenericHashTable.h - Definitions of the structs, functions and consts. 
+A few personal functions I made:
+	getHashVal - Gets table & data pointers, returns the hash value of the data or -1 if there's error.
+	addToList  - Gets table, object and index. Adds the data to a list according to the index. Return -1 if there's an error or the index if ok.
+	enlargeTable - gets a table pointer and doubling it's size. If there's error it returns -1, else it returns 0.

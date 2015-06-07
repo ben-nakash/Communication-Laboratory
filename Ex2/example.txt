@@ -1,0 +1,8 @@
+7
+a b 5
+a c 3 
+c b 5
+c d 1
+x y 5
+x z 3
+y z 8

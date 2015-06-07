@@ -1,0 +1,20 @@
+nakashbe
+Ben Nakash 303140057
+ex2
+Submited Files:
+	Makefile
+	README	- Readme file with description of the contents & personal functions within the exercise.
+	ex2.c - Implications of the functions located in the header file.
+	ex2.h - Definitions of the structs, functions and consts. 
+The functions I made:
+	fileRead - Extracts vertices & edges from a given file and creates a Graph to hold them. Return null if failed.
+	createEdge - Gets 2 vertices & weight, create an edge and adding it to a given graph. Return null if failed.
+	createGraph - Gets number of vertices & edges and create a graph struct. If failed return null.
+	createVertex - Gets a name and create a new Vertex. Return vertex if success or null if failed.
+	addVertexToGraph - Adding a vertex to a graph. If it already exist, it returns a pointer to the existed one.
+	addEdgeToGraph - Adding an edge to a graph. If its already exists it frees the new one.
+	freeVertex - free the allocated memory of a given vertex.
+	freeEdge - free the allocated memory of a given edge.
+	freeGraph - free the allocated memory of a given graph.
+	printGraph - prints out the graph in the following format: dst via distance.
+	bellmanFord - Bellman ford algorithm.

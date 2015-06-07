@@ -1,0 +1,18 @@
+nakashbe
+Ben Nakash 303140057
+ex3
+Submited Files:
+	Makefile
+	README	- Readme file with description of the contents & personal functions within the exercise.
+	ex3.c - Implications of the functions located in the header file.
+	ex3.h - Definitions of the structs, functions and consts. 
+The functions I made:
+	getSuffix - Extracts the suffix from a given line and returns it as a string.
+	checkArgs - Checks the run command to see if we got all the neccessary arguments and return the port number.
+	sendHelo - Writes to the socket 'helo [hostName]'.
+	communicate - Do all the communication between our client and the server.
+	readLineFromServer - Reads the servers answer and returns it as a string.
+	sendLineToServer - General function for writing to socket.
+	openSocketConnection - Opens a socket connection between our client and the server.
+	checkLineSentSuccessfully - Checks that sendLineToServer func finished successfully and there's no errors.
+	checkServerResponse - Check the return code of the server response if there's an error.

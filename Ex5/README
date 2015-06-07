@@ -1,0 +1,14 @@
+nakashbe
+Ben Nakash 303140057
+ex5
+Submited Files:
+	Makefile
+	README - Readme file with description of the contents & personal functions within the exercise.
+	ex5.c  - Implications of the functions located in the header file.
+	ex5.h  - Definitions of the structs, functions and consts. 
+	main.c - Main part of the program.
+The functions I made:
+openServerSocketConnection - Gets a port number and open a socket connection for the server. Return the serverFD if succeeded, or -1(=ERROR) if failed.
+startServerRun - Simulates the server runtime. It goes on an endless loop and checks either a client tries to connect to it, to disconnect from it or 					 send information through it to the other connected clients.
+createNewConnection - Creates a new connection with a new client. Return the new max number of connections.
+readLine - Checks if a connection is terminated or trying to send information to the other clients, and acts according to the needed operation.
