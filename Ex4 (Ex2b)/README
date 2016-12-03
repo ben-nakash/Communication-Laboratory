@@ -1,12 +1,22 @@
-nakashbe
-Ben Nakash 303140057
-ex2b
-Submited Files:
-	Makefile
-	README	- Readme file with description of the contents & personal functions within the exercise.
-	ex2b.c - Implications of the functions located in the header file.
-	ex2b.h - Definitions of the structs, functions and consts. 
-	main.c - Main part of the program.
+Created by Ben Nakash as final exercise in Communication Laboratory course in Azrieli College of Engineering.
+
+## Description
+This exercise simulates a network of routers, when each of them runs a Bellman Ford algorithm. This algorithm's target is to find the
+shortest route to all of the other routers within his reach. The exerciese was developed in linux environment. </br>
+To simulate a network containing N routers, it is needed to run N terminals when each one of them receives a file with details about the
+edges this router has and their weights. After all the routers have been initiallized this way, they calculate the shortest route to each
+of the other routers within their reach. </br>
+Each of the routers run 2 sockets on two different threads - one for reading information, and one for sending information. The protocol 
+being used in this simulator is the TCP/IP protocol. In order to overcome issues like deadlocks - it required also a use in mutex, in 
+order to lock critical code parts.
+
+### Submited Files:
+1. Makefile
+2. README - Readme file with description of the contents & personal functions within the exercise.
+3. ex2b.c - IMmplementation of the functions described in the header file.
+4. ex2b.h - Definitions of the softwares structs, functions and constants. 
+5. main.c
+
 The functions I made:
 	readFromFile  -		Extracts routers & edges from a file and creates a Network to hold them. Return NULL if failed.
 	createEdge 	  -		Gets 2 routers & weight, create an edge and adding it to a given network. Return NULL if failed.
