@@ -27,22 +27,22 @@ order to lock critical code parts.
 	7. freeRouter 		- 	Free the allocated memory of a given router.
 	8. freeEdge 		-	Free the allocated memory of a given edge.
 	9. freeNetwork 		- 	Free the allocated memory of a given network.
-	10. findRouterByName    -	Search for a router with the given name within the network, and returns a pointer to it. If such not exists it 							returns null.
-	11. initialize 		- 	Initializing all the needed database, structs and variables in order to be able to create the threads later and do the 							calculations. Return 0 if succeeded, or -1(=FALSE) if failed.
-	12. initializeDV    -	This function initializing the DV(=Distance Vector) of the source of the network. Return 0 if succeeded, or -1(=FALSE) if 							failed.
+	10. findRouterByName    -	Search for a router with the given name within the network, and returns a pointer to it. If such not exists it returns null.
+	11. initialize 		- 	Initializing all the needed database, structs and variables in order to be able to create the threads later and do the calculations. Return 0 if succeeded, or -1(=FALSE) if failed.
+	12. initializeDV    -	This function initializing the DV(=Distance Vector) of the source of the network. Return 0 if succeeded, or -1(=FALSE) if failed.
 	13. initializeVIA 	- 	This function initializing the VIA vector of the network's source. Return 0 if succeeded, or -1(=FALSE) if failed.
 	14. initializeNeighbors  -	Initialize all the needed data about the neighbors of the source. Return 0 if succeeded, or -1(=FALSE) if failed.
-	15. areNeighboors - Checks if a given router is a neighbor of the source. If it does - returns the weight of the edge connecting between them, If 						not, returns -1(=FALSE).
-	16. createThreads - Initialize the needed database for the threads, creates them, and wait for them to finish. If an error occours, it returns 						-1(=FALSE). If finished successfully returns 0.
+	15. areNeighboors - Checks if a given router is a neighbor of the source. If it does - returns the weight of the edge connecting between them, If not, returns -1(=FALSE).
+	16. createThreads - Initialize the needed database for the threads, creates them, and wait for them to finish. If an error occours, it returns -1(=FALSE). If finished successfully returns 0.
 	17. senderSocketConnect   - Creates a sender socket connection. Return 0 if succeeded, or -1(=FALSE) if failed.
 	18. receiverSocketConnect - Creates a receiver socket connection. Return 0 if succeeded, or -1(=FALSE) if failed.
 	19. checkNumOfNeighbors   - Checks the number of neighbors of a given router, and updates it within it's struct.
-	20. freeThreadData 		  - Free all the allocated memory of given ThreadData struct.
-	21. updateNeighborDV - Gets a DV of a neighbor and updates the ThreadData if neccessary. Also updates the array that saves data about who 						   already sent his DV.
+	20. freeThreadData 	  - Free all the allocated memory of given ThreadData struct.
+	21. updateNeighborDV - Gets a DV of a neighbor and updates the ThreadData if neccessary. Also updates the array that saves data about who already sent his DV.
 	22. relax - Relax function that works on the same principals as Bellman Ford algorithm.
-	23. initializeWhoSentDV - Initializing the "WhoSentDV" array, allocate memory for it and set its values to be: -1 if the index represents 							  a neighbor, else 1.
+	23. initializeWhoSentDV - Initializing the "WhoSentDV" array, allocate memory for it and set its values to be: -1 if the index represents a neighbor, else 1.
 	24. sender     - Sends the DV of the source via socket to a receiver of a neighbor.
 	25. receiver   - Read a neighbors DV through a socket connection, and updates the neighbors data according to it.
-	26. calculator - Waits until the source receive the DV from all it's neighbors, then it use the Relax function to recalculate the DV of 				 the source.
-	27. initializeThreadData - Allocates memory and initialize all needed parameters for the ThreadData struct, in order that each thread will have 						   all the needed data. returns a pointer to the allocated struct if succeed, or NULL of failed.
-	28. initializeNeighborData - Allocates memory and initializing all the needed data about neighbors. This data is part of the ThreadData. It 							 returns a pointer to the allocated struct if succeed, or NULL of failed.
+	26. calculator - Waits until the source receive the DV from all it's neighbors, then it use the Relax function to recalculate the DV of the source.
+	27. initializeThreadData - Allocates memory and initialize all needed parameters for the ThreadData struct, in order that each thread will have all the needed data. returns a pointer to the allocated struct if succeed, or NULL of failed.
+	28. initializeNeighborData - Allocates memory and initializing all the needed data about neighbors. This data is part of the ThreadData. It returns a pointer to the allocated struct if succeed, or NULL of failed.
